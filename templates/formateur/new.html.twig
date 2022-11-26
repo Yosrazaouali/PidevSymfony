@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Formateur{% endblock %}
+
+{% block body %}
+    <h1>Create new Formateur</h1>
+
+    {{ form_start(form,{'attr': {'novalidate': 'novalidate'}} ) }}
+    <table>
+
+        <tr>
+            <td>{{ form_label(form.Nomformateur,"Nomformateur") }}</td>
+            <td>{{ form_widget(form.Nomformateur) }}</td>
+            <td>{{ form_errors(form.Nomformateur) }}</td>
+        </tr>
+        <tr>
+            <td>{{ form_label(form.Prenomformateur,"Prenomformateur") }}</td>
+            <td>{{ form_widget(form.Prenomformateur) }}</td>
+            <td>{{ form_errors(form.Prenomformateur) }}</td>
+        </tr>
+        <tr>
+            <td>{{ form_label(form.Bio,"Bio") }}</td>
+            <td>{{ form_widget(form.Bio) }}</td>
+            <td>{{ form_errors(form.Bio) }}</td>
+        </tr>
+        <tr>
+            <td>{{ form_label(form.status,"status") }}</td>
+            <td>{{ form_widget(form.status) }}</td>
+            <td>{{ form_errors(form.status) }}</td>
+        </tr>
+        <tr>
+            <td>{{ form_label(form.Telephone,"Telephone") }}</td>
+            <td>{{ form_widget(form.Telephone) }}</td>
+            <td>{{ form_errors(form.Telephone) }}</td>
+        </tr>
+        <tr>
+            <td>{{ form_label(form.Diplome,"Diplome") }}</td>
+            <td>{{ form_widget(form.Diplome) }}</td>
+            <td>{{ form_errors(form.Diplome) }}</td>
+        </tr>
+        <tr>
+            <td>{{ form_label(form.Email,"Email") }}</td>
+            <td>{{ form_widget(form.Email) }}</td>
+            <td>{{ form_errors(form.Email) }}</td>
+        </tr>
+
+    </table>
+        {{ form_widget(form.Save) }}
+        {{ form_end(form) }}
+    </table>
+
+    <a href="{{ path('app_formateur_index') }}">back to list</a>
+{% endblock %}

@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Formation{% endblock %}
+
+{% block body %}
+    <h1>Create new Formation</h1>
+
+    {{ form_start(form,{'attr': {'novalidate': 'novalidate'}} ) }}
+<table>
+
+    <tr>
+        <td>{{ form_label(form.Nomformation,"Nomformation") }}</td>
+        <td>{{ form_widget(form.Nomformation) }}</td>
+        <td>{{ form_errors(form.Nomformation) }}</td>
+    </tr>
+    <tr>
+        <td>{{ form_label(form.Prixformation,"Prixformation") }}</td>
+        <td>{{ form_widget(form.Prixformation) }}</td>
+        <td>{{ form_errors(form.Prixformation) }}</td>
+    </tr>
+    <tr>
+        <td>{{ form_label(form.Datedebut,"Datedebut") }}</td>
+        <td>{{ form_widget(form.Datedebut) }}</td>
+        <td>{{ form_errors(form.Datedebut) }}</td>
+    </tr>
+    <tr>
+        <td>{{ form_label(form.Datefin,"Datefin") }}</td>
+        <td>{{ form_widget(form.Datefin) }}</td>
+        <td>{{ form_errors(form.Datefin) }}</td>
+    </tr>
+</table>
+{{ form_widget(form.Save) }}
+    {{ form_end(form) }}
+</table>
+
+<a href="{{ path('app_formation_index') }}">back to list</a>
+{% endblock %}
+
+
+
+
